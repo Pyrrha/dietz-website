@@ -3,35 +3,59 @@ layout: page
 title: Privacy Policy
 ---
 <div class="col-lg-12 text-center">
-	<h2 class="section-heading text-uppercase">Privacy Policy</h2>
+	<h2 class="section-heading text-uppercase">MENTIONS LÉGALES</h2>
 </div>
 
-This Privacy Policy describes how your personal information is collected, used, and shared when you visit {{ site.title }} (the “Site”).
+---
 
-**PERSONAL INFORMATION WE COLLECT**
+Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site Dietz l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
 
-{% if site.analytics.google %}
+---
 
-Automatically Collected (Google Analytics):
+**EDITION DU SITE**
 
-When you visit the Site, we automatically receive information about your device from your browser, such as your IP address. As you browse the Site, we also collect information about how you interact with the Site. We refer to this automatically-collected information as “Device Information”.
+Le présent site, accessible à l’URL dietz.dev (le « Site »), est édité par Tristan Dietz, entrepreneur individuel immatriculé sous le numéro SIREN 821 910 189, au 33 avenue des Gobelins, 75013 Paris.
 
-We collect Device Information using cookies. “Cookies” are data files that are placed on your device. For more information about cookies and how to disable them, visit http://www.allaboutcookies.org.
+---
 
-We do this using Google Analytics: <https://www.google.com/intl/en/policies/privacy/>.
+**HÉBERGEMENT**
 
-You can opt-out of Google Analytics here: <https://tools.google.com/dlpage/gaoptout>.
+Le Site est hébergé par la société GitHub, Inc., situé 88 Colin P. Kelly Jr. Street San Francisco, CA 94107 United States.
 
-{% else %}
+Téléphone : +1 (415) 448-6673.
 
-We do not collect any data about you or use any cookies.
+---
 
-{% endif %}
+**DIRECTION DE LA PUBLICATION**
 
-**CHANGES**
+Le Directeur de la publication du Site est Tristan Dietz.
 
-We may update this privacy policy from time to time for personal, operational, legal, or regulatory reasons.
+---
 
-**CONTACT US**
+**PROPRIÉTÉ INTELLECTUELLE**
 
-For more information about our privacy practices or if you have questions, please contact us by email at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+L’ensemble des éléments accessibles sur le Site, notamment les textes, codes source, illustrations, images, graphismes, logos, icônes, vidéos, logiciels et éléments techniques, sont protégés par les dispositions du Code de la propriété intellectuelle et demeurent la propriété exclusive de leur auteur, sauf mentions contraires.
+
+Toute reproduction, représentation, adaptation, modification, publication, transmission ou exploitation de tout ou partie du Site, par quelque procédé que ce soit et sur quelque support que ce soit, est interdite sans autorisation écrite préalable.
+
+Toute utilisation non autorisée du Site ou de l’un quelconque des éléments qu’il contient pourra donner lieu à des poursuites conformément aux dispositions légales applicables.
+
+---
+
+**RESPONSABILITÉ**
+
+L’éditeur du Site s’efforce de fournir des informations aussi précises que possible. Toutefois, il ne pourra être tenu responsable des omissions, inexactitudes ou carences dans la mise à jour des informations publiées sur le Site.
+
+---
+
+**MODIFICATIONS**
+
+Ces mentions légales sont susceptibles d'être modifiées pour assurer leur conformité avec le droit applicable ou refléter l'évolution du Site.
+
+---
+
+**NOUS CONTACTER**
+
+Par email : <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+
+Par courrier : {{ site.address }}
