@@ -1,0 +1,27 @@
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#top" class="nav__logo" aria-label="{{ site.title }} — accueil">
+      Dietz<span class="nav__logo-accent">.dev</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Navigation principale">
+      {% for link in site.data.nav.links %}
+      <a href="{{ link.url }}" class="nav__link">{{ link.label }}</a>
+      {% endfor %}
+    </nav>
+
+    <a
+      href="{{ site.data.nav.cta.url }}"
+      class="btn btn--small nav__cta"
+      target="_blank"
+      rel="noopener"
+      >{{ site.data.nav.cta.label }}</a
+    >
+
+    <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+    </button>
+  </div>
+</header>

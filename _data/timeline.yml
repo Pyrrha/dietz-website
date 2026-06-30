@@ -1,0 +1,34 @@
+- date: Août 2016
+  kind: place
+  title: Création à Marseille
+  text: "Lancement de l'activité, d'abord orientée web design et réparation hardware."
+
+- date: Février 2019
+  kind: place
+  title: "Cap sur Paris & le DevOps"
+  text: "Pivot vers le DevOps et l'infrastructure cloud. Premières missions dans le secteur financier."
+
+- date: Octobre 2022
+  kind: cert
+  title: Certification Terraform Associate
+  text: "« L'infrastructure as code comme discipline, pas comme outil. »"
+
+- date: Septembre 2023
+  kind: cert
+  title: Certified Kubernetes Administrator (CKA)
+  text: "Capacité à opérer des clusters Kubernetes en production."
+
+- date: Novembre 2024
+  kind: cert
+  title: AWS Certified Cloud Practitioner
+  text: "Maîtrise des services cœur (IAM, EC2, EKS, S3, RDS, CloudFront, Route 53). Socle FinOps."
+
+- date: Avril 2025
+  kind: cert
+  title: Certified Kubernetes Security Specialist (CKS)
+  text: "« La certification la plus exigeante de l'écosystème Kubernetes. »"
+
+- date: "2025"
+  kind: place
+  title: Installation à Nice
+  text: "Toujours focalisé sur des missions courtes à fort impact."

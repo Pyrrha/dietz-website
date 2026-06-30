@@ -1,0 +1,14 @@
+- title: Audit FinOps
+  icon: |
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+  text: "J'analyse vos coûts Cloud par business unit et j'identifie les gaspillages actionnables — avec un plan de réduction priorisé."
+
+- title: Refonte CI/CD
+  icon: |
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+  text: "J'audite, refonds ou construis vos pipelines CI/CD avec des templates réutilisables et une culture FinOps intégrée. Résultats mesurables."
+
+- title: "Kubernetes & Infra"
+  icon: |
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+  text: "Déploiement, hardening et opération de clusters Kubernetes. Suivi des pratiques GitOps via l'IaC, mise en place du monitoring."

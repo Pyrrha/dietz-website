@@ -1,0 +1,44 @@
+<section class="section timeline-section" id="timeline">
+  <div class="container">
+    <header class="section__head section__head--center">
+      <p class="eyebrow" data-reveal><span class="section__index">04</span> Histoire</p>
+      <h2 class="section__title" data-reveal>Éléments clés de l'activité</h2>
+    </header>
+
+    <div class="timeline" id="timeline-track">
+      <div class="timeline__line" aria-hidden="true">
+        <span class="timeline__progress" id="timeline-progress"></span>
+      </div>
+
+      {% for event in site.data.timeline %}
+      <article class="timeline__item" data-reveal>
+        <span class="timeline__dot" aria-hidden="true"></span>
+        <div class="timeline__card card">
+          <span class="timeline__date">{{ event.date }}</span>
+          <span class="timeline__icon" data-kind="{{ event.kind }}" aria-hidden="true">
+            {% if event.kind == "place" %}
+            <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            {% elsif event.kind == "cert" %}
+            <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+            {% endif %}
+          </span>
+          <h3 class="timeline__title">{{ event.title }}</h3>
+          <p class="timeline__text">{{ event.text }}</p>
+        </div>
+      </article>
+      {% endfor %}
+
+      <!-- CTA final -->
+      <article class="timeline__item timeline__item--final" data-reveal>
+        <span class="timeline__dot timeline__dot--final" aria-hidden="true"></span>
+        <div class="timeline__card timeline__card--cta">
+          <h3 class="timeline__title">Écrivons la suite ensemble&nbsp;!</h3>
+          <a href="#contact" class="btn btn--primary btn--small">
+            Me contacter
+            <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

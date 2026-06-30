@@ -1,0 +1,14 @@
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav class="mobile-menu__nav" aria-label="Navigation mobile">
+    {% for link in site.data.nav.links %}
+    <a href="{{ link.url }}" class="mobile-menu__link">{{ link.label }}</a>
+    {% endfor %}
+    <a
+      href="{{ site.data.nav.cta.url }}"
+      class="btn btn--primary mobile-menu__cta"
+      target="_blank"
+      rel="noopener"
+      >{{ site.data.nav.cta.label }}</a
+    >
+  </nav>
+</div>

@@ -1,15 +1,76 @@
-# [Agency Jekyll Theme](https://github.com/raviriley/agency-jekyll-theme) Starter Template
-[![RubyGems Downloads](https://img.shields.io/gem/dt/jekyll-agency.svg)](https://rubygems.org/gems/jekyll-agency)
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/raviriley/agency-jekyll-theme/blob/master/LICENSE.txt)
-[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/raviriley)
+# Dietz.dev — Thème Jekyll
 
-This is the fastest and easiest way to get up and running on GitHub Pages.
-Simply generate your own repository by clicking the 
-[![template button](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/raviriley/agency-jekyll-theme-starter/generate) button, 
-then replace the sample content with your own and configure for your needs.
+Site statique Jekyll, hébergeable sur GitHub Pages. Rendu identique au projet Vite d'origine.
 
-If you want your website to be at `YOUR-USERNAME.github.io`, that's what you must name your repo. If you want it to be like this: `https://raviriley.github.io/agency-jekyll-theme-starter/`, them make sure the `baseurl` in `_config.yml` matches the name of your repo. You can also use a `CNAME` file and your own custom domain!
+## Structure
 
-**If you enjoy this theme, please consider [supporting me](https://www.paypal.me/raviriley) to continue developing and maintaining it.**
+```
+├── _config.yml          ← Config du site (url, titre, description)
+├── _data/
+│   ├── nav.yml          ← Liens de navigation + CTA
+│   ├── footer.yml       ← Liens du footer
+│   ├── services.yml     ← Les 3 cartes de services
+│   ├── metrics.yml      ← Les 4 chiffres d'impact
+│   ├── timeline.yml     ← Les événements de la timeline
+│   └── about.yml        ← Texte de la section À propos
+├── _includes/           ← Composants HTML réutilisables
+├── _layouts/
+│   └── default.html     ← Layout principal (head, nav, footer)
+├── assets/
+│   ├── css/main.css     ← CSS compilé (ne pas modifier)
+│   └── js/main.js       ← JS compilé (ne pas modifier)
+├── index.md             ← Page d'accueil (front matter éditable)
+└── favicon.svg
+```
 
-[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/raviriley)
+## Modifier le contenu
+
+**Tout le contenu est dans `_data/` — modifie uniquement ces fichiers YAML.**
+
+- Changer les services → `_data/services.yml`
+- Changer les chiffres d'impact → `_data/metrics.yml`
+- Ajouter un événement à la timeline → `_data/timeline.yml`
+- Changer le texte À propos → `_data/about.yml`
+- Changer le lien de réservation → `_data/nav.yml` (champ `cta.url`)
+
+**Pour les textes du hero et contact**, modifie le front matter de `index.md`.
+
+## Ajouter une nouvelle page
+
+Crée un fichier `.md` à la racine :
+
+```md
+---
+layout: default
+title: "Ma nouvelle page"
+description: "Description SEO"
+---
+
+# Contenu en Markdown
+
+Mon texte ici...
+```
+
+## Déploiement sur GitHub Pages
+
+1. Push le projet sur un repo GitHub
+2. Dans Settings → Pages → Source : sélectionne `main` branch / `/ (root)`
+3. GitHub Pages build automatiquement avec Jekyll
+
+### Avec un domaine custom
+
+Dans `_config.yml`, mets à jour :
+```yaml
+url: "https://ton-domaine.com"
+baseurl: ""
+```
+
+## Développement local
+
+```bash
+gem install bundler
+bundle install
+bundle exec jekyll serve
+```
+
+Ouvre http://localhost:4000

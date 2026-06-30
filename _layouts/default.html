@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'fr' }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}" />
+    <meta name="theme-color" content="#08090A" />
+    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ page.title | default: site.title }}" />
+    <meta property="og:description" content="{{ page.description | default: site.description }}" />
+
+    <!-- Évite le flash de contenu non animé -->
+    <script>document.documentElement.classList.add('js', 'hero-prep');</script>
+
+    <!-- Polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+    {% seo %}
+  </head>
+
+  <body>
+    <!-- Barre de progression de scroll -->
+    <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
+
+    <a class="skip-link" href="#main">Aller au contenu</a>
+
+    {% include nav.html %}
+    {% include mobile-menu.html %}
+
+    <main id="main">
+      <span id="top"></span>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html>

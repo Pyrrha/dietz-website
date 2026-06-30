@@ -1,0 +1,30 @@
+<section class="section about" id="about">
+  <div class="container about__grid">
+    <header class="section__head about__head">
+      <p class="eyebrow" data-reveal><span class="section__index">03</span> À propos</p>
+      <h2 class="section__title" data-reveal>Mon approche</h2>
+    </header>
+
+    <div class="about__content">
+      <p class="about__lead" data-reveal>{{ site.data.about.lead }}</p>
+
+      <ul class="about__list">
+        {% for point in site.data.about.points %}
+        <li data-reveal>
+          <svg class="icon icon--sm about__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>{{ point }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="about__finance" data-reveal>
+        <p class="about__finance-text">{{ site.data.about.finance_text }}</p>
+        <div class="about__logos" aria-label="Clients du secteur financier">
+          {% for client in site.data.about.clients %}
+          <span class="about__logo">{{ client }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

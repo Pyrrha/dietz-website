@@ -1,0 +1,10 @@
+links:
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/tristan-dietz/
+    external: true
+  - label: GitHub
+    url: https://github.com/Pyrrha
+    external: true
+  # - label: Rendez-vous
+  #   url: https://cal.eu/tristan-dietz/echange-initial
+  #   external: true

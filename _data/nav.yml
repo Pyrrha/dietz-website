@@ -1,0 +1,15 @@
+links:
+  - label: Services
+    url: "#services"
+  - label: Impact
+    url: "#impact"
+  - label: À propos
+    url: "#about"
+  - label: Histoire
+    url: "#timeline"
+  - label: Contact
+    url: "#contact"
+
+cta:
+  label: Réserver un échange
+  url: https://cal.eu/tristan-dietz/echange-initial

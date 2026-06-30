@@ -1,0 +1,34 @@
+<section class="hero" id="hero">
+  <div class="hero__glow" aria-hidden="true" data-parallax="0.25"></div>
+  <div class="container hero__inner">
+    <p class="eyebrow hero__eyebrow"><span class="eyebrow__dot"></span>{{ page.hero_eyebrow | default: "FinOps · DevOps · Cloud · Kubernetes" }}</p>
+
+    <h1 class="hero__title">
+      {% assign lines = page.hero_title | split: "|" %}
+      {% for line in lines %}
+      <span class="line">{% for word in line.words %}<span class="word {% if word.accent %}accent{% endif %}">{{ word.text }}</span> {% endfor %}</span>
+      {% endfor %}
+      <!-- Fallback statique si pas de front matter structuré -->
+      {% if page.hero_title == nil %}
+      <span class="line"><span class="word">Réduisez</span> <span class="word">vos</span> <span class="word">coûts</span> <span class="word">infra</span></span>
+      <span class="line"><span class="word">sans</span> <span class="word">compromettre</span></span>
+      <span class="line"><span class="word accent">la</span> <span class="word accent">qualité.</span></span>
+      {% endif %}
+    </h1>
+
+    <p class="hero__subtitle" data-hero-fade>{{ page.hero_subtitle | default: "Payez moins, obtenez mieux." }}</p>
+
+    <div class="hero__actions" data-hero-fade>
+      <a href="#services" class="btn btn--primary">
+        {{ page.hero_cta_primary | default: "Voir comment je réduis vos coûts" }}
+        <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a href="{{ site.data.nav.cta.url }}" class="btn btn--ghost" target="_blank" rel="noopener">{{ site.data.nav.cta.label }}</a>
+    </div>
+  </div>
+
+  <a href="#services" class="hero__scroll" aria-label="Faire défiler vers les services" data-hero-fade>
+    <span>Défiler</span>
+    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+  </a>
+</section>

@@ -1,0 +1,16 @@
+# Remplace value/prefix/suffix/label par tes vrais chiffres
+- value: 42
+  prefix: "−"
+  suffix: " %"
+  label: de coûts cloud réduits sur une mission type
+
+- value: 3
+  suffix: "×"
+  label: pipelines CI/CD plus rapides après refonte
+
+- value: 7
+  suffix: " ans"
+  label: en environnements financiers exigeants
+
+- value: 4
+  label: "certifications cloud, infra & sécurité"

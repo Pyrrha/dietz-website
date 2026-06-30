@@ -1,0 +1,20 @@
+<section class="section services" id="services">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow" data-reveal><span class="section__index">01</span> Services</p>
+      <h2 class="section__title" data-reveal>Des interventions courtes,<br />des résultats durables.</h2>
+    </header>
+
+    <div class="services__grid">
+      {% for service in site.data.services %}
+      <article class="card service-card" data-reveal>
+        <div class="service-card__icon" aria-hidden="true">
+          {{ service.icon }}
+        </div>
+        <h3 class="service-card__title">{{ service.title }}</h3>
+        <p class="service-card__text">{{ service.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="footer__logo">Dietz<span class="nav__logo-accent">.dev</span></span>
+    <p class="footer__copy">Copyright © Dietz {{ site.time | date: "%Y" }}</p>
+    <nav class="footer__links" aria-label="Liens de pied de page">
+      {% for link in site.data.footer.links %}
+      <a href="{{ link.url }}" {% if link.external %}target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>
+      {% endfor %}
+      <a href="#" class="footer__legal">Mentions légales</a>
+    </nav>
+  </div>
+</footer>

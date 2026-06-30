@@ -1,0 +1,24 @@
+<section class="section impact" id="impact">
+  <div class="impact__glow" aria-hidden="true"></div>
+  <div class="container">
+    <header class="section__head section__head--center">
+      <p class="eyebrow" data-reveal><span class="section__index">02</span> Impact</p>
+      <h2 class="section__title" data-reveal>Des résultats mesurables,<br />pas des promesses.</h2>
+    </header>
+
+    <div class="impact__grid">
+      {% for metric in site.data.metrics %}
+      <div class="metric" data-reveal>
+        <span
+          class="metric__value"
+          data-counter
+          data-value="{{ metric.value }}"
+          {% if metric.prefix %}data-prefix="{{ metric.prefix }}"{% endif %}
+          {% if metric.suffix %}data-suffix="{{ metric.suffix }}"{% endif %}
+        >{{ metric.prefix }}0{{ metric.suffix }}</span>
+        <span class="metric__label">{{ metric.label }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
