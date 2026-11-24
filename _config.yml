@@ -1,8 +1,10 @@
 title: "Dietz.dev"
 description: "Consultant FinOps, DevOps & Cloud. Audit de coûts cloud, refonte CI/CD, Kubernetes & infrastructure. Des interventions courtes avec des résultats mesurables."
-url: "https://pyrrha.github.io" # à adapter
+url: "https://dietz.dev"
 baseurl: ""
 lang: fr
+locale: fr_FR
+author: Tristan Dietz
 
 # Build
 markdown: kramdown
