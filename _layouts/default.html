@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#08090A" />
     <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}" />
 
-    <!-- Évite le flash de contenu non animé -->
-    <script>document.documentElement.classList.add('js', 'hero-prep');</script>
+    <!-- Les animations d'apparition ne s'activent que si le JS est chargé -->
+    <script>document.documentElement.classList.add('js');</script>
 
     <!-- Polices -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,6 +39,6 @@
 
     {% include footer.html %}
 
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
   </body>
 </html>
