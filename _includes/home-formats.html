@@ -1,0 +1,18 @@
+<section class="section" id="formats">
+  <div class="container">
+    <header class="section__head section__head--center">
+      <p class="eyebrow" data-reveal><span class="section__index">04</span> Formats</p>
+      <h2 class="section__title" data-reveal>Une mission longue,<br />un audit, ou entre les deux.</h2>
+    </header>
+    <div class="grid grid--3">
+      {% for f in site.data.formats %}
+      <div class="card format-card{% if f.featured %} format-card--featured{% endif %}" data-reveal>
+        <p class="format-card__duration">{{ f.duration }}</p>
+        <p class="format-card__title">{{ f.title }}</p>
+        <p class="format-card__text">{{ f.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="formats__note" data-reveal>{{ site.data.profile.availability }}.</p>
+  </div>
+</section>

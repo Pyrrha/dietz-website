@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <meta name="theme-color" content="#08090A" />
     <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}" />
 
@@ -20,7 +19,6 @@
   </head>
 
   <body>
-    <!-- Barre de progression de scroll -->
     <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
 
     <a class="skip-link" href="#main">Aller au contenu</a>
@@ -29,7 +27,6 @@
     {% include mobile-menu.html %}
 
     <main id="main">
-      <span id="top"></span>
       {{ content }}
     </main>
 
