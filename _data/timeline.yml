@@ -1,34 +1,50 @@
-- date: Août 2016
+# kind : work (expérience), cert (certification), place (étape)
+- date: "2017 – 2021"
   kind: place
-  title: Création à Marseille
-  text: "Lancement de l'activité, d'abord orientée web design et réparation hardware."
+  title: "EPITA"
+  text: "École d'ingénieurs en informatique."
 
-- date: Février 2019
+- date: "Octobre 2018"
+  kind: work
+  title: "Natixis — DevOps & développeur backend"
+  text: "API de suivi des calculs de risque (Python, Kafka), chaînes CI/CD Jenkins et XL Release, analyse de code. Conférences internes sur les pratiques DevOps et le Green IT."
+
+- date: "2019 – 2020"
+  kind: work
+  title: "Première expérience en indépendant"
+  text: "Infrastructure d'une startup sur Scaleway, CI/CD GitLab, encadrement d'une équipe de cinq développeurs en tant que product owner."
+
+- date: "Octobre 2021"
+  kind: work
+  title: "Padok — SRE / DevOps"
+  text: "Cabinet spécialisé cloud et DevOps. Missions dans le secteur financier sur Azure et AWS. Modules Terraform open source, standards de qualité de l'IaC, participation à un programme de formation."
+
+- date: "Octobre 2022"
+  kind: cert
+  title: "HashiCorp Terraform Associate"
+  text: "L'infrastructure as code comme discipline, pas comme outil."
+
+- date: "Septembre 2023"
+  kind: cert
+  title: "Certified Kubernetes Administrator (CKA)"
+  text: "Opérer des clusters Kubernetes en production."
+
+- date: "Octobre 2023"
+  kind: work
+  title: "Code Busters — Platform Engineer"
+  text: "Missions chez un éditeur de logiciel d'analytique financière, puis dans une banque d'investissement."
+
+- date: "Novembre 2024"
+  kind: cert
+  title: "AWS Certified Cloud Practitioner"
+  text: "Les fondamentaux d'AWS, socle de la démarche FinOps."
+
+- date: "Avril 2025"
+  kind: cert
+  title: "Certified Kubernetes Security Specialist (CKS)"
+  text: "La certification sécurité de l'écosystème Kubernetes."
+
+- date: "2026"
   kind: place
-  title: "Cap sur Paris & le DevOps"
-  text: "Pivot vers le DevOps et l'infrastructure cloud. Premières missions dans le secteur financier."
-
-- date: Octobre 2022
-  kind: cert
-  title: Certification Terraform Associate
-  text: "« L'infrastructure as code comme discipline, pas comme outil. »"
-
-- date: Septembre 2023
-  kind: cert
-  title: Certified Kubernetes Administrator (CKA)
-  text: "Capacité à opérer des clusters Kubernetes en production."
-
-- date: Novembre 2024
-  kind: cert
-  title: AWS Certified Cloud Practitioner
-  text: "Maîtrise des services cœur (IAM, EC2, EKS, S3, RDS, CloudFront, Route 53). Socle FinOps."
-
-- date: Avril 2025
-  kind: cert
-  title: Certified Kubernetes Security Specialist (CKS)
-  text: "« La certification la plus exigeante de l'écosystème Kubernetes. »"
-
-- date: "2025"
-  kind: place
-  title: Installation à Nice
-  text: "Toujours focalisé sur des missions courtes à fort impact."
+  title: "Indépendant, depuis Aix-en-Provence"
+  text: "J'accompagne directement les équipes, en remote, à Paris ou en région PACA."
