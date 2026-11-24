@@ -6,6 +6,11 @@ lang: fr
 locale: fr_FR
 author: Tristan Dietz
 
+# Afficher les chiffres précis dans les cas clients (true / false).
+# Laissé à false tant que les anciens employeurs n'ont pas donné leur accord écrit
+# (clauses de secret professionnel). Les chiffres sont déjà saisis dans _data/cases.yml.
+show_case_figures: false
+
 # Build
 markdown: kramdown
 permalink: pretty
@@ -18,6 +23,28 @@ exclude:
   - Dockerfile
   - docker-compose.yml
 
-# Collections (optionnel, pour blog posts futurs)
+# Pages « Pour qui » et « Expertises » : un fichier Markdown par page.
+collections:
+  solutions:
+    output: true
+    permalink: /pour-qui/:name/
+  expertises:
+    output: true
+    permalink: /expertises/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      type: solutions
+    values:
+      layout: solution
+  - scope:
+      type: expertises
+    values:
+      layout: expertise
+
 plugins:
   - jekyll-seo-tag

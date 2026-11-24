@@ -1,0 +1,33 @@
+{% assign c = include.case %}
+<article class="card case-card" data-reveal>
+  <p class="case-card__context">{{ c.context }}</p>
+  <h3 class="case-card__title">{{ c.title }}</h3>
+
+  <div class="case-card__block">
+    <p class="case-card__block-label">Le contexte</p>
+    <p>{{ c.problem }}</p>
+  </div>
+
+  <div class="case-card__block">
+    <p class="case-card__block-label">Ce que j'ai fait</p>
+    <ul>
+      {% for a in c.actions %}<li>{{ a }}</li>{% endfor %}
+    </ul>
+  </div>
+
+  <div class="case-card__result">
+    {% if site.show_case_figures and c.figures %}
+    <div class="case-card__figures">
+      {% for f in c.figures %}
+      <div>
+        <p class="case-card__figure">{{ f.value }}</p>
+        <p class="case-card__figure-label">{{ f.label }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="case-card__block-label">Le résultat</p>
+    <p class="case-card__outcome">{{ c.outcome }}</p>
+    {% endif %}
+  </div>
+</article>

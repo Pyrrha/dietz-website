@@ -1,0 +1,67 @@
+# Cas clients anonymisés.
+# - `figures` n'est affiché que si `show_case_figures: true` dans _config.yml.
+# - `outcome` est la version sans chiffre, affichée sinon.
+# - `expertises` : clés des pages expertises liées (nom du fichier dans _expertises/).
+# - `home: true` : affiché sur la page d'accueil.
+
+- id: livraison-legacy
+  home: true
+  context: "Éditeur de logiciel d'analytique financière · ~6 mois"
+  title: "Une chaîne de livraison héritée de 15 ans"
+  problem: "Des scripts Bash, Python et JavaScript accumulés au fil des années. La livraison prenait des jours et échouait plus souvent qu'elle ne réussissait."
+  actions:
+    - "Réécriture complète de la chaîne en CircleCI avec des orbs privés"
+    - "Cache optimisé, compatible avec plusieurs versions de Java"
+    - "Une trentaine de projets centralisés dans une organisation GitHub dédiée"
+    - "Premiers postmortems et démarche d'amélioration continue"
+  outcome: "Une livraison passée de plusieurs jours à quelques minutes, devenue fiable, et des coûts de CI qui ne partent plus en fumée."
+  figures:
+    - value: "2 jours → 20 min"
+      label: "durée du processus de livraison"
+    - value: "30 % → 100 %"
+      label: "de livraisons réussies"
+  expertises: [industrialiser, couts-cloud]
+
+- id: couts-par-metier
+  home: true
+  context: "Banque d'investissement · ~20 mois"
+  title: "Rendre les coûts visibles et l'infrastructure exploitable"
+  problem: "Une plateforme partagée par plusieurs métiers, sans visibilité sur qui consomme quoi, dans un environnement très contraint (Kubernetes auto-hébergé)."
+  actions:
+    - "Outil de calcul et de refacturation des coûts d'infrastructure par métier"
+    - "Pipelines CI/CD repensés avec des templates réutilisables par les équipes"
+    - "Infrastructure as Code adaptée aux contraintes de l'environnement"
+    - "Passerelle API HTTP/gRPC avec authentification (IdP externe) pour le contrôle d'accès et la traçabilité"
+  outcome: "Des coûts attribués à chaque métier, des équipes qui adoptent les mêmes pipelines, et des coûts AWS réduits sur un moteur de calcul de risque."
+  expertises: [couts-cloud, industrialiser, securite-kubernetes]
+
+- id: clusters-banque
+  home: true
+  context: "Banque française · ~10 mois"
+  title: "Exploiter et faire évoluer 4 clusters Kubernetes"
+  problem: "Quatre clusters en production à construire et exploiter, avec des montées de version à mener et une base Terraform à migrer."
+  actions:
+    - "Build & run de 4 clusters Kubernetes sur AWS (EKS), 2 montées de version"
+    - "Migration de la base de code Terraform"
+    - "Optimisation d'un cluster Elasticsearch, procédures d'exploitation rédigées"
+    - "Supervision Prometheus, Grafana, Datadog et gestion des alertes"
+  outcome: "Une plateforme stable et à jour, et des coûts d'outillage et de stockage nettement réduits."
+  figures:
+    - value: "−25 %"
+      label: "de coûts sur l'environnement d'outillage"
+    - value: "−93 %"
+      label: "de coûts de stockage des images de conteneurs"
+  expertises: [migrations, fiabilite, couts-cloud]
+
+- id: azure-iac
+  home: false
+  context: "Acteur du secteur financier · ~8 mois"
+  title: "Reprendre le contrôle d'une infrastructure Azure"
+  problem: "Une architecture complète créée à la main, difficile à reproduire et à faire évoluer."
+  actions:
+    - "Import de toute l'architecture existante dans Terraform"
+    - "Factorisation du code avec Terragrunt"
+    - "Documentation, procédures d'installation et de maintenance"
+    - "Déploiement de nouveaux projets sur la plateforme, renouvellement des certificats"
+  outcome: "Une infrastructure entièrement décrite en code, documentée et reproductible."
+  expertises: [industrialiser]

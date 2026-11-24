@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{% include page-hero.html parent_label="Pour qui" parent_url="/#pour-qui" current=page.kicker eyebrow=page.for_whom title=page.hero_title lead=page.lead secondary_url="#missions" secondary_label="Voir des exemples" %}
+
+<section class="page-section">
+  <div class="container page-section__grid">
+    <header data-reveal>
+      <h2 class="page-section__title">Ce que vous vivez</h2>
+      <p class="page-section__intro">Les situations que je rencontre le plus souvent dans ce contexte.</p>
+    </header>
+    <div class="grid grid--2">
+      {% for c in page.challenges %}
+      <div class="card link-card" data-reveal>
+        <p class="link-card__title">{{ c.title }}</p>
+        <p class="link-card__text">{{ c.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container page-section__grid">
+    <header data-reveal>
+      <h2 class="page-section__title">Comment je travaille</h2>
+    </header>
+    <ul class="check-list">
+      {% for a in page.approach %}<li data-reveal>{{ site.data.icons.check }}<span>{{ a }}</span></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container page-section__grid">
+    <header data-reveal>
+      <h2 class="page-section__title">Ce que je peux prendre en charge</h2>
+      <p class="page-section__intro">Chaque expertise a sa page détaillée.</p>
+    </header>
+    {% include expertise-list.html keys=page.expertises %}
+  </div>
+</section>
+
+<section class="page-section" id="missions">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <h2 class="page-section__title">Exemples de missions</h2>
+      <p class="page-section__intro">Cas réels, anonymisés.</p>
+    </header>
+    {% include case-list.html ids=page.cases %}
+    {% include cta-band.html %}
+  </div>
+</section>
