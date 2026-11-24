@@ -1,0 +1,22 @@
+<section class="section impact" id="preuves">
+  <div class="impact__glow" aria-hidden="true"></div>
+  <div class="container">
+    <header class="section__head section__head--center">
+      <p class="eyebrow" data-reveal><span class="section__index">05</span> En bref</p>
+      <h2 class="section__title" data-reveal>Un profil SRE senior,<br />forgé dans la finance.</h2>
+    </header>
+    <div class="impact__grid impact__grid--3">
+      {% for m in site.data.profile.metrics %}
+      <div class="metric" data-reveal>
+        <span class="metric__value">{{ m.value }}</span>
+        <span class="metric__label">{{ m.label }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="chips" data-reveal>
+      {% for c in site.data.profile.certifications %}<span class="chip" title="{{ c.label }}">{{ site.data.icons.badge }}{{ c.short }}</span>{% endfor %}
+      <a class="chip" href="https://github.com/Pyrrha" target="_blank" rel="noopener">{{ site.data.icons.code }}Modules Terraform open source</a>
+    </div>
+    <p class="formats__note" data-reveal><a href="{{ '/a-propos/' | relative_url }}" class="accent">Mon parcours et ma façon de travailler →</a></p>
+  </div>
+</section>

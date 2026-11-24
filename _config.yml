@@ -1,8 +1,15 @@
 title: "Dietz.dev"
-description: "Consultant FinOps, DevOps & Cloud. Audit de coûts cloud, refonte CI/CD, Kubernetes & infrastructure. Des interventions courtes avec des résultats mesurables."
-url: "https://pyrrha.github.io" # à adapter
+description: "SRE senior freelance pour les plateformes financières : Kubernetes sécurisé, production fiable, infrastructure industrialisée et coûts cloud maîtrisés. 7 ans en banque, asset management et édition de logiciels financiers."
+url: "https://dietz.dev"
 baseurl: ""
 lang: fr
+locale: fr_FR
+author: Tristan Dietz
+
+# Afficher les chiffres précis dans les cas clients (true / false).
+# Laissé à false tant que les anciens employeurs n'ont pas donné leur accord écrit
+# (clauses de secret professionnel). Les chiffres sont déjà saisis dans _data/cases.yml.
+show_case_figures: false
 
 # Build
 markdown: kramdown
@@ -13,7 +20,31 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - Dockerfile
+  - docker-compose.yml
 
-# Collections (optionnel, pour blog posts futurs)
+# Pages « Pour qui » et « Expertises » : un fichier Markdown par page.
+collections:
+  solutions:
+    output: true
+    permalink: /pour-qui/:name/
+  expertises:
+    output: true
+    permalink: /expertises/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      type: solutions
+    values:
+      layout: solution
+  - scope:
+      type: expertises
+    values:
+      layout: expertise
+
 plugins:
   - jekyll-seo-tag

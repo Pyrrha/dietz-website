@@ -1,0 +1,17 @@
+{%- comment -%}
+  Liste d'expertises. `include.keys` : liste de noms de fichiers (sans .md) dans l'ordre voulu.
+  Sans `keys`, affiche toutes les expertises par ordre.
+{%- endcomment -%}
+<div class="expertise-list">
+  {% if include.keys %}
+    {% for key in include.keys %}
+      {% capture target %}/expertises/{{ key }}/{% endcapture %}
+      {% for e in site.expertises %}
+        {% if e.url == target %}{% include expertise-item.html item=e %}{% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% else %}
+    {% assign sorted = site.expertises | sort: "order" %}
+    {% for e in sorted %}{% include expertise-item.html item=e %}{% endfor %}
+  {% endif %}
+</div>

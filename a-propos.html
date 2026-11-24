@@ -1,0 +1,36 @@
+---
+layout: default
+title: "À propos — Tristan Dietz, SRE senior"
+description: "Tristan Dietz, SRE / Platform Engineer senior. Sept ans dans la finance, certifié CKA, CKS et Terraform. Indépendant depuis Aix-en-Provence."
+permalink: /a-propos/
+approach:
+  - "<strong>Un objectif précis, un livrable mesurable.</strong> J'arrive pour réduire un coût, débloquer une livraison ou sécuriser une plateforme, pas pour ajouter de la complexité."
+  - "<strong>Le contexte avant les recettes.</strong> Ce qui marche dans une scale-up ne marche pas forcément dans une banque, et inversement."
+  - "<strong>Des équipes autonomes après mon départ.</strong> Documentation, procédures et passation font partie de la mission."
+  - "<strong>Partager ce que j'apprends.</strong> Modules open source, retours d'expérience et conférences internes, depuis le début de ma carrière."
+---
+{% include page-hero.html current="À propos" eyebrow="Tristan Dietz · SRE / Platform Engineer" title="Sept ans à faire tourner des plateformes là où l'erreur coûte cher." lead="Je conçois, sécurise et exploite des infrastructures cloud et Kubernetes, avec un fil rouge : livrer plus vite, plus sûrement, pour moins cher. Presque toute ma carrière s'est faite dans la finance, chez des banques, des acteurs de la gestion d'actifs et un éditeur de logiciels financiers." secondary_url="#parcours" secondary_label="Voir mon parcours" %}
+
+<section class="page-section">
+  <div class="container page-section__grid">
+    <header data-reveal>
+      <h2 class="page-section__title">Ma façon de travailler</h2>
+    </header>
+    <ul class="check-list">
+      {% for a in page.approach %}<li data-reveal>{{ site.data.icons.check }}<span>{{ a }}</span></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container page-section__grid">
+    <header data-reveal>
+      <h2 class="page-section__title">Certifications</h2>
+    </header>
+    <ul class="check-list">
+      {% for c in site.data.profile.certifications %}<li data-reveal>{{ site.data.icons.badge }}<span><strong>{{ c.label }}</strong></span></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include timeline.html %}

@@ -1,0 +1,20 @@
+<section class="section" id="pour-qui">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow" data-reveal><span class="section__index">01</span> Pour qui</p>
+      <h2 class="section__title" data-reveal>Votre contexte,<br />mes réponses.</h2>
+      <p class="section__lead" data-reveal>J'interviens là où la fiabilité et la sécurité ne sont pas optionnelles : la finance, et ceux qui travaillent pour elle.</p>
+    </header>
+    <div class="grid grid--3">
+      {% assign sorted = site.solutions | sort: "order" %}
+      {% for s in sorted %}
+      <a href="{{ s.url | relative_url }}" class="card link-card" data-reveal>
+        <p class="link-card__kicker">{{ s.kicker }}</p>
+        <p class="link-card__title">{{ s.card_title }}</p>
+        <p class="link-card__text">{{ s.card_text }}</p>
+        <span class="link-card__more">Voir ce que je fais pour vous {{ site.data.icons.arrow }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

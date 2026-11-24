@@ -1,0 +1,9 @@
+<div class="cta-band" data-reveal>
+  <div>
+    <p class="cta-band__title">{{ include.title | default: "Parlons de votre contexte." }}</p>
+    <p class="cta-band__text">{{ include.text | default: "Un premier échange offert et sans engagement." }}</p>
+  </div>
+  <a href="{{ site.data.nav.cta.url }}" class="btn btn--primary" target="_blank" rel="noopener">
+    {{ site.data.icons.calendar }} Réserver un échange
+  </a>
+</div>

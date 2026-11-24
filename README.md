@@ -1,76 +1,44 @@
-# Dietz.dev — Thème Jekyll
+# Dietz.dev
 
-Site statique Jekyll, hébergeable sur GitHub Pages. Rendu identique au projet Vite d'origine.
+Site statique Jekyll, hébergé sur GitHub Pages (domaine `dietz.dev`).
 
-## Structure
+## Où modifier quoi
 
-```
-├── _config.yml          ← Config du site (url, titre, description)
-├── _data/
-│   ├── nav.yml          ← Liens de navigation + CTA
-│   ├── footer.yml       ← Liens du footer
-│   ├── services.yml     ← Les 3 cartes de services
-│   ├── metrics.yml      ← Les 4 chiffres d'impact
-│   ├── timeline.yml     ← Les événements de la timeline
-│   └── about.yml        ← Texte de la section À propos
-├── _includes/           ← Composants HTML réutilisables
-├── _layouts/
-│   └── default.html     ← Layout principal (head, nav, footer)
-├── assets/
-│   ├── css/main.css     ← CSS compilé (ne pas modifier)
-│   └── js/main.js       ← JS compilé (ne pas modifier)
-├── index.md             ← Page d'accueil (front matter éditable)
-└── favicon.svg
-```
+| Contenu | Fichier |
+|---|---|
+| Accueil (titre, sous-titre) | `index.html` (front matter) |
+| Pages « Pour qui » | `_solutions/*.md` (un fichier = une page `/pour-qui/<nom>/`) |
+| Pages « Expertises » | `_expertises/*.md` (un fichier = une page `/expertises/<nom>/`) |
+| Cas clients (anonymisés) | `_data/cases.yml` |
+| Formats d'engagement | `_data/formats.yml` |
+| Profil, certifications, chiffres « En bref » | `_data/profile.yml` |
+| Parcours (frise) | `_data/timeline.yml` |
+| Navigation, lien de prise de rendez-vous | `_data/nav.yml` |
+| Liens du pied de page et du contact | `_data/footer.yml` |
+| Mentions légales (société, SIREN, adresse) | `_data/legal.yml` |
+| Icônes | `_data/icons.yml` |
 
-## Modifier le contenu
+Tout le contenu des pages « Pour qui » et « Expertises » est dans le front matter
+de leur fichier Markdown ; la mise en page est dans `_layouts/solution.html` et
+`_layouts/expertise.html`.
 
-**Tout le contenu est dans `_data/` — modifie uniquement ces fichiers YAML.**
+### Chiffres des cas clients
 
-- Changer les services → `_data/services.yml`
-- Changer les chiffres d'impact → `_data/metrics.yml`
-- Ajouter un événement à la timeline → `_data/timeline.yml`
-- Changer le texte À propos → `_data/about.yml`
-- Changer le lien de réservation → `_data/nav.yml` (champ `cta.url`)
+Les chiffres précis (`figures` dans `_data/cases.yml`) ne s'affichent que si
+`show_case_figures: true` dans `_config.yml`. Sinon, c'est le texte `outcome`
+qui est affiché.
 
-**Pour les textes du hero et contact**, modifie le front matter de `index.md`.
+## Performances
 
-## Ajouter une nouvelle page
-
-Crée un fichier `.md` à la racine :
-
-```md
----
-layout: default
-title: "Ma nouvelle page"
-description: "Description SEO"
----
-
-# Contenu en Markdown
-
-Mon texte ici...
-```
-
-## Déploiement sur GitHub Pages
-
-1. Push le projet sur un repo GitHub
-2. Dans Settings → Pages → Source : sélectionne `main` branch / `/ (root)`
-3. GitHub Pages build automatiquement avec Jekyll
-
-### Avec un domaine custom
-
-Dans `_config.yml`, mets à jour :
-```yaml
-url: "https://ton-domaine.com"
-baseurl: ""
-```
+- Aucune dépendance JavaScript : `assets/js/main.js` (~4 Ko) gère uniquement le
+  menu mobile, la barre de progression et les apparitions au défilement.
+- Animations en CSS, désactivées si l'utilisateur préfère réduire les animations.
+- Polices auto-hébergées dans `assets/fonts/` (licence SIL OFL), aucun appel à Google.
 
 ## Développement local
 
 ```bash
-gem install bundler
-bundle install
-bundle exec jekyll serve
+docker compose up
 ```
 
 Ouvre http://localhost:4000

@@ -1,0 +1,67 @@
+---
+layout: default
+---
+{% include page-hero.html parent_label="Expertises" parent_url="/#expertises" current=page.card_title title=page.hero_title lead=page.lead secondary_url="#missions" secondary_label="Voir des exemples" %}
+
+<section class="page-section">
+  <div class="container page-section__grid">
+    <header data-reveal>
+      <h2 class="page-section__title">Vous reconnaissez-vous&nbsp;?</h2>
+    </header>
+    <ul class="check-list check-list--question">
+      {% for s in page.symptoms %}<li data-reveal>{{ site.data.icons.question }}<span>{{ s }}</span></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container page-section__grid">
+    <header data-reveal>
+      <h2 class="page-section__title">Ce que je fais</h2>
+    </header>
+    <ul class="check-list">
+      {% for a in page.actions %}<li data-reveal>{{ site.data.icons.check }}<span>{{ a }}</span></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container page-section__grid">
+    <header data-reveal>
+      <h2 class="page-section__title">Ce que vous obtenez</h2>
+    </header>
+    <div>
+      <ul class="check-list">
+        {% for d in page.deliverables %}<li data-reveal>{{ site.data.icons.check }}<span>{{ d }}</span></li>{% endfor %}
+      </ul>
+      {% if page.tools %}
+      <div class="tool-list" data-reveal>
+        {% for t in page.tools %}<span class="chip">{{ t }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="page-section" id="missions">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <h2 class="page-section__title">Exemples de missions</h2>
+      <p class="page-section__intro">Cas réels, anonymisés.</p>
+    </header>
+    {% include case-list.html ids=page.cases %}
+    {% include cta-band.html %}
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container page-section__grid">
+    <header data-reveal>
+      <h2 class="page-section__title">Autres expertises</h2>
+    </header>
+    <div class="expertise-list">
+      {% assign sorted = site.expertises | sort: "order" %}
+      {% for e in sorted %}{% if e.url != page.url %}{% include expertise-item.html item=e %}{% endif %}{% endfor %}
+    </div>
+  </div>
+</section>

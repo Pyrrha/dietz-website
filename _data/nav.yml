@@ -1,14 +1,20 @@
+# Navigation principale.
+# `section` = id de la section sur la page d'accueil (sert à surligner le lien actif).
 links:
-  - label: Services
-    url: "#services"
-  - label: Impact
-    url: "#impact"
+  - label: Pour qui
+    url: "/#pour-qui"
+    section: pour-qui
+  - label: Expertises
+    url: "/#expertises"
+    section: expertises
+  - label: Cas clients
+    url: "/#cas-clients"
+    section: cas-clients
+  - label: Formats
+    url: "/#formats"
+    section: formats
   - label: À propos
-    url: "#about"
-  - label: Histoire
-    url: "#timeline"
-  - label: Contact
-    url: "#contact"
+    url: "/a-propos/"
 
 cta:
   label: Réserver un échange

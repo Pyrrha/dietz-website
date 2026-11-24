@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Mentions légales"
+description: "Mentions légales du site dietz.dev."
+permalink: /mentions-legales/
+sitemap: false
+---
+{% include page-hero.html current="Mentions légales" title="Mentions légales" %}
+
+<section class="page-section legal">
+  <div class="container">
+    <dl>
+      <dt>Éditeur</dt>
+      <dd>Tristan Dietz{% if site.data.legal.company %} — {{ site.data.legal.company }}{% endif %}</dd>
+      {% if site.data.legal.siren %}<dt>SIREN</dt><dd>{{ site.data.legal.siren }}</dd>{% endif %}
+      {% if site.data.legal.address %}<dt>Adresse</dt><dd>{{ site.data.legal.address }}</dd>{% endif %}
+      <dt>Contact</dt>
+      <dd><a class="accent" href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></dd>
+      <dt>Directeur de la publication</dt>
+      <dd>Tristan Dietz</dd>
+      <dt>Hébergeur</dt>
+      <dd>GitHub Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</dd>
+      <dt>Données personnelles</dt>
+      <dd>Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. La prise de rendez-vous est gérée par un service tiers (Cal.com), soumis à sa propre politique de confidentialité.</dd>
+    </dl>
+  </div>
+</section>

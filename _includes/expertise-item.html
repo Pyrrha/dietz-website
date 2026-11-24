@@ -1,0 +1,9 @@
+{% assign e = include.item %}
+<a href="{{ e.url | relative_url }}" class="card expertise-item" data-reveal>
+  <span class="expertise-item__icon">{{ site.data.icons[e.icon] }}</span>
+  <span>
+    <span class="expertise-item__title">{{ e.card_title }}</span>
+    <span class="expertise-item__text">{{ e.card_text }}</span>
+  </span>
+  <span class="expertise-item__arrow">{{ site.data.icons.arrow }}</span>
+</a>

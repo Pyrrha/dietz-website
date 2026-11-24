@@ -1,0 +1,12 @@
+- duration: "Plusieurs mois"
+  title: "Mission longue"
+  text: "J'intègre votre équipe plateforme pour un chantier de fond : construction, migration, industrialisation. Facturation au jour."
+  featured: true
+- duration: "5 à 10 jours"
+  title: "Audit au forfait"
+  text: "Sécurité Kubernetes, coûts cloud ou fiabilité : un état des lieux précis et un plan d'action priorisé, à prix fixe."
+  featured: false
+- duration: "Quelques jours par mois"
+  title: "SRE à temps partagé"
+  text: "Pour les équipes qui n'ont pas encore besoin d'un SRE à plein temps : un regard expert régulier, sur la durée."
+  featured: false

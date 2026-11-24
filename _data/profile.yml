@@ -1,0 +1,25 @@
+# Informations générales réutilisées sur tout le site.
+name: Tristan Dietz
+role: SRE / Platform Engineer senior
+location: Aix-en-Provence
+availability: "En remote, à Paris ou en région PACA"
+email: tristan@dietz.dev
+
+certifications:
+  - label: CKA — Certified Kubernetes Administrator
+    short: CKA
+  - label: CKS — Certified Kubernetes Security Specialist
+    short: CKS
+  - label: HashiCorp Terraform Associate
+    short: Terraform Associate
+  - label: AWS Certified Cloud Practitioner
+    short: AWS Cloud Practitioner
+
+# Chiffres affichés dans la section « Preuves » (aucun chiffre client ici).
+metrics:
+  - value: "7 ans"
+    label: en environnements financiers exigeants
+  - value: "4"
+    label: certifications Kubernetes, sécurité, IaC et cloud
+  - value: "3 clouds"
+    label: AWS, Azure et Scaleway, plus du Kubernetes auto-hébergé

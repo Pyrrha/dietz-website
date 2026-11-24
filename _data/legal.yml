@@ -1,0 +1,4 @@
+# À compléter dès que la structure juridique existe (obligatoire pour un site professionnel).
+company: ""   # ex. "Dietz SAS" ou "EI Tristan Dietz"
+siren: ""
+address: ""   # adresse du siège (une domiciliation suffit)

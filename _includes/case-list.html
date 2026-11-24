@@ -1,0 +1,13 @@
+{%- comment -%}
+  Cas clients. `include.ids` : liste d'identifiants (voir _data/cases.yml).
+  Sans `ids`, affiche les cas marqués `home: true`.
+{%- endcomment -%}
+<div class="grid grid--cases">
+  {% if include.ids %}
+    {% for id in include.ids %}
+      {% for c in site.data.cases %}{% if c.id == id %}{% include case-card.html case=c %}{% endif %}{% endfor %}
+    {% endfor %}
+  {% else %}
+    {% for c in site.data.cases %}{% if c.home %}{% include case-card.html case=c %}{% endif %}{% endfor %}
+  {% endif %}
+</div>
